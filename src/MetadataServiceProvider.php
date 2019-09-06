@@ -64,7 +64,7 @@ class MetadataServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__.'/../config/metadata.php' => $this->app->configPath('metadata.php')
-            ], 'metadata-config');
+            ], 'metadata-configs');
 
             $this->publishes([
                 __DIR__.'/../resources/views' => $this->app->resourcePath('views/vendor/metadata'),
