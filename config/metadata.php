@@ -34,13 +34,6 @@ return [
     'referrer' => 'no-referrer-when-downgrade',
 
     /*
-     | Author
-     |
-     | Defines the name of the document's author
-     */
-    'author' => '',
-
-    /*
      | Title
      |
      | ! This metadata is used inside head section to assign a title for search engine
@@ -56,7 +49,7 @@ return [
     'description' => '',
 
     /*
-     | Keywords
+     | Keywords [optional]
      |
      | Contains words relevant to the page's content separated by commas
      */
@@ -68,9 +61,9 @@ return [
 
     'fb' => [
         /*
-         |
+         | Activate facebook schema
          */
-        'is_active' => true,
+        'is_active' => false,
 
         /*
          | Facebook App Id
@@ -89,7 +82,7 @@ return [
         'type' => 'website',
 
         /*
-         | This content has a video
+         | The content has a video
          */
         'has_video' = false,
 
@@ -97,9 +90,17 @@ return [
 
     'twitter' => [
         /*
-         |
+         | Activate twitter schema
          */
-        'is_active' => true,
+        'is_active' => false,
+
+        /*
+         | Twitter card type
+         |
+         | Possible values:
+         | summary, summary_large_image, app, player
+         */
+        'card_type' => 'summary',
 
         /*
          | Twitter referred @site
@@ -110,14 +111,6 @@ return [
          | Twitter referred @username
          */
         'author' => '',
-
-        /*
-         | Twitter card type
-         |
-         | Possible values:
-         | summary, summary_large_image, app, player
-         */
-        'card_type' => 'summary',
 
     ],
 
