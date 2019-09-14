@@ -1,7 +1,9 @@
 
 ## Metadata
 
-This package provides a way to include metadata tags and other SEO related values inside a view. This is the most flexible way of inject metadata inside webpages without the need of a database.
+This package provides a way to include metadata tags and other SEO related values inside a view.
+
+This is the most flexible way of inject metadata inside webpages without the need of a database.
 
 > Use this package if you don't need complex implementation over SEO metadata.
 
@@ -49,7 +51,7 @@ This package is a very simple metadata management suite to include metadata tags
 <html>
     <head>
         <!-- Metadata -->
-        @stack( 'metadata' )
+        @stack('metadata')
 
     </head>
     <body>
@@ -64,9 +66,9 @@ Now you're ready to include your metadata.
 
 ```php
 
-@extends( 'layouts.page' )
+@extends('layouts.page')
 
-@section( 'page' )
+@section('content')
 
 <section>
     <h2>{{ $article->title }}</h2>
@@ -77,11 +79,11 @@ Now you're ready to include your metadata.
 @endsection
 
 // push metadata view on the stack
-@push( 'metadata' )
-    @include( 'metadata::metadata', [
+@push('metadata')
+    @include('metadata::metadata', [
         'title' => $article->title, // <- use the model title to contextualize the title metadata
-        'author' => 'John Doe'      // <- simply overrides default author value
-    ] )
+        'author' => 'John Doe'      // <- or simply overrides default author value at runtime
+    ])
 @endpush
 
 ```
