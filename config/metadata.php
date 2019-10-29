@@ -84,7 +84,7 @@ return [
         /*
          | The content has a video
          */
-        'has_video' = false,
+        'has_video' => false,
 
     ],
 
@@ -117,7 +117,7 @@ return [
     /*
      | Resources for the content
      |
-     | Becouse twitter cards fallbackk to use og: we can optimize metadata
+     | Because twitter cards fallback to use og: we can optimize metadata
      | ! Video will be used only with fb.has_video flag or twitter.card_type player
      */
     'resources' => [
